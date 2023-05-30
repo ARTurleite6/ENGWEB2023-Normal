@@ -1,0 +1,20 @@
+Grupo 1.2- Resposta às queries
+1. db.plantas.countDocuments()
+2. db.plantas.find({ Freguesia: 'São Domingos de Rana' }).count()
+3. db.plantas.distinct('Freguesia').sort()
+4. db.plantas.aggregate([
+ {
+     $group: {
+        _id: "$Freguesia",
+        count: {$sum: 1},
+     }
+ }
+ ])
+5. db.plantas.aggregate([
+ {
+     $group: {
+        _id: "$Espécie",
+        count: {$sum: 1},
+     }
+ }
+ ])
