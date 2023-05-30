@@ -1,0 +1,26 @@
+extends layout.pug
+
+block content
+    .w3-container
+      table.w3-table-all
+        thead
+          tr
+            th Id
+            th Freguesia
+            th Espécie
+            th Estado
+            th Numero de intervencões
+        tbody
+          each planta in plantas
+              tr
+                td
+                  a(href="/" + planta.Id)= planta.Id
+                td
+                  a(href="/" + planta.Id)= planta.Freguesia
+                td
+                  a(href="/" + planta.Id)= planta.Espécie
+                td
+                  a(href="/" + planta.Id)= planta.Estado
+                td
+                  a(href="/" + planta.Id)= planta['Número de Intervenções']
+

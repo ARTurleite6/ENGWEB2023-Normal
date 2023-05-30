@@ -1,0 +1,25 @@
+extends layout.pug
+block content 
+      .w3-container
+        h1 Plant Details
+        .w3-card
+            .w3-container
+                p Id: #{planta.Id}
+                p Número de Registo: #{planta['Número de Registo']}
+                p Código de Rua: #{planta['Código de Rua']}
+                p Rua: #{planta.Rua}
+                p Local: #{planta.Local}
+                p Freguesia: #{planta.Freguesia}
+                p Espécie: #{planta.Espécie}
+                p Nome Científico: #{planta['Nome Científico']}
+                p Origem: #{planta.Origem}
+                p Data de Plantação: #{planta['Data de Plantação']}
+                p Estado: #{planta.Estado}
+                p Caldeira: #{planta.Caldeira}
+                p Tutor: #{planta.Tutor}
+                p Implantação: #{planta.Implantação}
+                p Gestor: #{planta.Gestor}
+                p Data de Actualização: #{planta['Data de Actualização']}
+                p Número de Intervenções: #{planta['Número de Intervenções']}
+        p
+         a(href="/") Go Back
