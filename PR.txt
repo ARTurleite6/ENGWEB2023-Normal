@@ -18,3 +18,11 @@ Grupo 1.2- Resposta às queries
      }
  }
  ])
+
+
+Para a resolucao do Ex1 e Ex2 realizei a persistencia de dados utilizando o mongodb, tendo sido utilizado a biblioteca mongoose que permite a
+criacao dos modelos requeridos, neste caso a Planta, para o setup da base de dados utilizei o mongoimport com as flags necessárias especificadas
+no enunciado, tendo usado o url dessa base de dados como configuração no codigo da api;
+
+para executar as aplicacoes pretendidas será apenas necessário executar o comando npm run start, após instalar as dependencias necessárias, :wseja na pasta api para executar a API de dados, seja
+na pasta interface para executar a interface do Ex2.

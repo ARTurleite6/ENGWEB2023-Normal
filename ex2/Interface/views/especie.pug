@@ -1,0 +1,30 @@
+extends layout.pug
+block content 
+        .w3-container
+          h1 Plant Details
+          .w3-card
+              .w3-container
+                  p Espécie: #{especie._id['Espécie']}
+                  p Nome Científico: #{especie._id['Nome Científico']}
+          p
+           a(href="/") Go Back
+        .w3-container
+          table.w3-table-all
+            thead
+              tr
+                th Id
+                th Freguesia
+                th Espécie
+                th Estado
+                th Numero de intervencões
+            tbody
+              each planta in plantas
+                  tr
+                    td
+                      a(href="/" + planta.Id)= planta.Id
+                    td= planta.Freguesia
+                    td
+                      a(href="/especies/" + planta.Espécie)= planta.Espécie
+                    td= planta.Estado
+                    td= planta['Número de Intervenções']
+

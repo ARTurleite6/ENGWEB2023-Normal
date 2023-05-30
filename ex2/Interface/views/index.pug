@@ -15,12 +15,9 @@ block content
               tr
                 td
                   a(href="/" + planta.Id)= planta.Id
+                td= planta.Freguesia
                 td
-                  a(href="/" + planta.Id)= planta.Freguesia
-                td
-                  a(href="/" + planta.Id)= planta.Espécie
-                td
-                  a(href="/" + planta.Id)= planta.Estado
-                td
-                  a(href="/" + planta.Id)= planta['Número de Intervenções']
+                  a(href="/especies/" + planta.Espécie)= planta.Espécie
+                td= planta.Estado
+                td= planta['Número de Intervenções']
 

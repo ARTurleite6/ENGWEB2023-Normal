@@ -15,11 +15,28 @@ router.get('/freguesias', async (req, res) => {
 
 router.get('/especies', async (req, res) => {
     try {
-        const especies = await Planta.distinct("Espécie").sort().exec();
+        const especies = await Planta.distinct("Espécie").sort().exec()
         console.log(especies);
         res.json(especies);
     } catch(error) {
         console.dir(error);
+    }
+});
+
+router.get('/especies/:id', async (req, res) => {
+    const id = req.params.id;
+    console.log(id);
+    try {
+        const especies = await Planta.aggregate([
+            {$match: { "Espécie": id }},
+            {$group: {"_id": { "Espécie": "$Espécie", "Nome Científico": "$Nome Científico" }}}
+            
+        ]).exec()
+        console.log(especies);
+        res.json(especies);
+    } catch(error) {
+        console.log(error);
+        res.send('Error getting especie');
     }
 });
 
